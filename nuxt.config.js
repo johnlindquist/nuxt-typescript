@@ -37,9 +37,6 @@ module.exports = {
    */
   build: {
     extend(config) {
-      config.resolve.alias['nuxt-class-component'] =
-        '~plugins/nuxt-class-component'
-
       for (rule of config.module.rules) {
         if (rule.loader === 'vue-loader') {
           rule.query.loaders.ts = 'ts-loader?{"appendTsSuffixTo":["\\\\.vue$"]}'
